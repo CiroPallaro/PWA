@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trabajo Práctico Modulo 2</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div>
+        <h1>Trabajo Práctico Modulo 2</h1>
+    </div>
+
+    <div>
+
+        <form id="registroForm">
+            <label for="nombre">Nombre: </label>
+            <input type="text" id="nombre" name="nombre" class="input-field">
+            <div id="errorNombre" class="error"></div>
+
+            <label for="apellido">Apellido: </label>
+            <input type="text" id="apellido" name="apellido" class="input-field">
+            <div id="errorApellido" class="error"></div>
+
+            <label for="telefono">Telefono: </label>
+            <input type="number" id="telefono" name="telefono" class="input-field">
+            <div id="errorTelefono" class="error"></div>
+
+            <label for="email">Email: </label>
+            <input type="email" id="email" name="email" class="input-field" pattern=".+@gmail\.com" size="30" required>
+            <div id="errorEmail" class="error"></div>
+
+            <label for="tpc">Tipo de contacto</label>
+            <select name="tpc" id="tpc" required>
+                <option value="">Seleccione el contacto</option>
+                <option value="soporte">Soporte</option>
+                <option value="ventas">Ventas</option>
+            </select>
+
+            <label for="asunto">Asunto: </label>
+            <input type="text" id="asunto" name="asunto" class="input-field">
+            <div id="errorAsunto" class="error"></div>
+
+            <label for="Descripcion">Descripcion: </label>
+            <textarea name="descripcion" id="descripcion" maxlength="100" required></textarea>
+            <p id="contador">0/100</p>
+
+
+
+            
+            <button type="submit" class="btn-submit">Registrar</button>
+
+        </form>
+
+        <div id="mensaje"></div>
+
+
+    </div>
+
+
+
+
+    <script type="module" src="main.js"></script>
+</body>
+</html>
