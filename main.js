@@ -21,7 +21,6 @@ document.addEventListener("DOMContentLoaded", () =>{
     function validarFormulario(){
         const nombre = document.getElementById("nombre").value.trim();
         const apellido = document.getElementById("apellido").value.trim();
-        const telefono = document.getElementById("telefono").value.trim();
         const asunto = document.getElementById("asunto").value.trim();
 
         let valid = true; //Variable para verificar si el formulario es valido
@@ -40,14 +39,6 @@ document.addEventListener("DOMContentLoaded", () =>{
             valid = false;
         } else {
             document.getElementById("errorApellido").innerText = "";
-        }
-
-        //Valida que haya un número telefonico
-        if (telefono === "") {
-            document.getElementById("errorTelefono").innerText = "Ingrese su número de telefono";
-            valid = false;
-        } else {
-                document.getElementById("errorTelefono").innerText = "";
         }
 
         //Valida el asunto
